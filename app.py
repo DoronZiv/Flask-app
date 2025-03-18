@@ -27,8 +27,9 @@ def openai_assistant():
     except Exception as e:
         reply = f"שגיאה: {str(e)}"
 
- 	response = jsonify(reply=reply)  # Make sure this line uses spaces
-	response.headers['Content-Type'] = 'application/json; charset=utf-8'
+    # ✅ Correct indentation (4 spaces used)
+    response = jsonify(reply=reply)
+    response.headers['Content-Type'] = 'application/json; charset=utf-8'
 
     return response, 200
 
